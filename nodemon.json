@@ -1,0 +1,8 @@
+{
+  "watch": [
+    "src/**"
+  ],
+  "execMap": {
+    "ts": "ts-node --cache-directory .tscach"
+  }
+}
