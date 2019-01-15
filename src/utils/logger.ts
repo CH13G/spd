@@ -43,6 +43,12 @@ class Logger {
         chalk.yellow(str))
     );
   };
+  success(str: string) {
+    console.log(
+      format(chalk.bgGreen.black('[👏success]: '),
+        chalk.green(str))
+    );
+  };
   verbose(str: string){
     console.log(str);
   };

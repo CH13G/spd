@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 
 import * as semver from 'semver';
-// import * as program from 'commander';
 import lolcat from '../src/utils/lolcat';
 import logger from '../src/utils/logger';
 import * as pkg from '../package.json';
-import favicon from '../favicon';
+import {favicon1} from '../favicon';
 
 const program = require('commander');
 
@@ -23,14 +22,14 @@ if (!semver.satisfies(process.version, requiredVersion)) {
 program
   .version(`
   v${version}
-  ${lolcat(favicon)}
+  ${lolcat(favicon1)}
   `)
   .usage('<command> [options]')
-  .allowUnknownOption()
+  // .allowUnknownOption()
   .arguments('<cmd> [option...]')
   .action(notCmd)
   .parse(process.argv);
-console.log('process.argv', process.argv)
+
 function notCmd(cmd: string) {
   logger.error(`no <${cmd}> command given!`);
   process.exit(1);

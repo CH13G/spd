@@ -2,7 +2,7 @@ import * as puppeteer from 'puppeteer';
 import * as fs from 'fs';
 import { COOKIE_PATH } from '../../env';
 
-export function savaCookies(cookies: puppeteer.Cookie[]) {
+export function saveCookies(cookies: puppeteer.Cookie[]) {
   fs.writeFileSync(COOKIE_PATH, JSON.stringify(cookies));
 }
 
