@@ -24,7 +24,6 @@
     "lib": [
       "esnext",
       "dom",
-      "es2017.string",
       "scripthost"
     ],
     "baseUrl": ".",
