@@ -7,11 +7,11 @@ declare namespace Article {
     }
   }
   export type chapter = {
-    link: string;
-    level: number;
+    link: string; // 文章链接
+    level: number; // 几级目录 start 1
     name: string;
-    slug: string;
-    isPlain: boolean;
+    slug: string; // 短链接K
+    isPlain: boolean; // 是否只是章节名，无具体文章链接
   };
   export type chapters = {
     [index: number]: chapter;
